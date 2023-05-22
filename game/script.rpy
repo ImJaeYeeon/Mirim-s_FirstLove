@@ -37,9 +37,10 @@ label start:
 
         "지승현":
             "전교1등 선배 지승현을 선택했습니다."
-            m3 "[player_name] 안녕? ㅎㅎ"
-            
 
+            jump start3
+
+        
 #이우주
 
 label start1:
@@ -255,5 +256,118 @@ label jin_ending4:
 
     "내 고백을 들은 진혁이는 귀가 빨개지고 고개를 푹 숙인다."
     m2 "응... 좋아."
+
+    "{b}Happy Ending{/b}."
+
+# 지승현
+
+label start3:
+    "시험기간 도서관에서 침 흘리며 졸고 있는 [player_name]"
+    "그때 전교 1등 지승현 선배가 다가와서 깨워준다."
+
+    p "헉 감사합니다!"
+
+label seng_love1:
+
+    m3 "공부 중인 거 같던데 같이 공부할래?"
+
+    "뭐라고 대답하지...?"
+    menu:
+        "바쁘실 것 같은데 저 혼자 알아서 할게요":
+
+            jump seng_ending1
+
+        "네..! 저도 전교1등 만들어주세요!" :
+
+            jump seng_love2
+
+label seng_love2:
+    
+    m3 "좋아 같이 공부하자"
+    m3 "무슨 공부를 도와줄까?"
+
+    menu:
+        "html공부":
+        
+            jump seng_ending2
+        
+        "미술공부":
+
+            jump seng_ending3
+
+        "React공부":    
+
+            jump seng_love3
+
+label seng_love3:
+    "승현 선배의 졸업 당일"
+
+    menu:
+        "승현 선배에게 고백한다.":
+        
+            jump seng_ending4
+        
+        "승현 선배에게 it쇼에 놀러오라고 자신의 번호를 남긴다.":
+
+            jump seng_love4
+
+label seng_love4:
+    "1년 뒤 3학년이 된 미림이의 it쇼 당일"
+    "저 멀리서 꽃다발을 든 승현이 걸어온다..."
+
+    m3 "수고했어, [player_name]아(야)!"
+
+    menu:
+        "1년만에 본 승현선배에게 안기며 고백한다.":
+        
+            jump seng_ending6
+            
+        "ㄱ..감사합니다..!!!(부끄러워 한 뒤 도망친다)":
+
+            jump seng_ending5
+
+label seng_ending1:
+    m3 "그래.. 나랑 공부하기 싫구나.."
+    "선배는 조용히 도서관을 떠난다."
+
+    "{b}Bad Ending{/b}."
+
+    return
+
+label seng_ending2:
+    m2 "이건 너무 기초인데.. 아직도 모른다니 실망이야"
+    m2 "같이 공부하기로 한 건 없던 걸로 하자"
+
+    "{b}Bad Ending{/b}."
+
+    return
+
+label seng_ending3:
+    m2 "이건 내 전공이 아니라.."
+    "승현은 당황한 표정을 짓더니 이내 나에게 말을 걸지 않았다."
+
+    "{b}Bad Ending{/b}."
+
+    return
+
+label seng_ending4: 
+    m3 "미안 지금은 너무 바빠서.."
+
+    "{b}Bad Ending{/b}."
+
+    return
+
+label seng_ending5:
+    m3 "아.. 가버렸네..."
+
+    "그렇게 난 다시는 선배를 볼 수 없었다."
+
+    "{b}Bad Ending{/b}."
+
+label seng_ending6:
+    p "승현 선배.. 아니 승현 오빠! 사실 예전부터 오빠를 좋아했어요!!!"
+
+    m3 "나도 널 좋아했어 우리 사귀자"
+
 
     "{b}Happy Ending{/b}."

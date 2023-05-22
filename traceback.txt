@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 368, in script
+    P "승현 선배.. 아니 승현 오빠! 사실 예전부터 오빠를 좋아했어요!!!"
+Exception: Sayer 'P' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 368, in script
+    P "승현 선배.. 아니 승현 오빠! 사실 예전부터 오빠를 좋아했어요!!!"
+  File "F:\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "F:\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'P' is not defined.
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.0.3.22090809
+Mirim_FirstLove 1.0
+Tue May 23 00:06:33 2023
