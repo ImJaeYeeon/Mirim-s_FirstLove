@@ -1,5 +1,10 @@
 ﻿# 게임에서 사용할 캐릭터를 정의합니다.
 define m1 = Character('이우주') #남주1 연하 이우주
+image background1_1 = "bg_우주/cafeteria.jpg"
+image background1_2 = "bg_우주/playgroud.jpg"
+image background1_3 = "bg_우주/schoolgate.jpg"
+image background1_4 = "bg_우주/to_school.jpg"
+
 define m2 = Character('배진혁') #남주2 동갑 배진혁
 define m3 = Character('지승현') #남주3 연상 지승현
 
@@ -23,6 +28,7 @@ label start:
         "남자를 골라보자"
 
         "이우주":
+            scene background1_4
             "아이돌 연습생 연하남 이우주를 선택했습니다."
             m1 "누나 안녕?ㅎㅎ"
             p "누구지? 당황스럽다.."
@@ -125,7 +131,7 @@ label love2:
                 jump ending4
 
 label love4:
-    "이럴수가.. 오늘부터 1일이당.. 뜨아.....(뜨거운 아메리카노 아님)"
+    "이럴수가.. 오늘부터 1일!!"
     "{b}Happy Ending{/b}."
 
     return
@@ -135,7 +141,7 @@ label ending1:
 
     "내가 대답을 잘 한 게 맞을까?"
 
-    m1 "누나.. 너무해!!"
+    m1 "누나.. 너무해요!!"
 
     "{b}Bad Ending{/b}."
 
@@ -144,7 +150,7 @@ label ending1:
 label ending2:
     "표정 관리가 안 되기 시작한다."
     
-    m1 "누나 표정이 왜 그래요?.. 저랑 있는 게 그렇게 싫어요?"
+    m1 "누나 표정이 왜 그래요?.. 저랑 있는 게 부담스러워요?"
 
     "{b}Bad Ending{/b}."
 
@@ -158,10 +164,6 @@ label ending3:
     return
 
 label ending4:
-
-    "ㅋㅋㅋㅋ"
-
-    "ㅉㅉ"
 
     "다 왔는데 이런.. 눈치 좀 챙겨 [player_name]!!!"
 
@@ -196,7 +198,7 @@ label jin_love1:
 
 label jin_love2:
     "진혁이 부축을 해주며 보건실로 향했지만 보건선생님은 출장을 가셨는지 자리에 계시지 않는다"
-    m2 "아... 쌤이 안 계시네."
+    m2 "아... 선생님이 안 계시네."
     m2 "너만 괜찮으면 내가 치료해줄게."
 
     menu:
@@ -239,7 +241,7 @@ label jin_ending2:
 
 label jin_ending3:
     m2 "그래...? 내가 좀 과했나보네."
-    "진혁은 어색하게 웃다 운동장으로 돌아갔다"
+    "진혁은 어색하게 웃으며 운동장으로 돌아갔다"
 
     "{b}Bad Ending{/b}."
 
@@ -322,7 +324,7 @@ label seng_love4:
         
             jump seng_ending6
             
-        "ㄱ..감사합니다..!!!(부끄러워 한 뒤 도망친다)":
+        "감사합니다..!!!(부끄러워 한 뒤 도망친다)":
 
             jump seng_ending5
 
@@ -363,6 +365,8 @@ label seng_ending5:
     "그렇게 난 다시는 선배를 볼 수 없었다."
 
     "{b}Bad Ending{/b}."
+
+    return
 
 label seng_ending6:
     p "승현 선배.. 아니 승현 오빠! 사실 예전부터 오빠를 좋아했어요!!!"
